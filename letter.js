@@ -1,22 +1,17 @@
-// Here is where the construction function letter is created.
-
 function letter(value) {
     this.letter = value;
     this.guessed = false;
 
-    // 
     this.toString = function() {
         if(this.letter === " ") {
             this.guessed = true;
             return " ";
         }
+        else if(this.guessed === false) {
+            return "_";
+        }
         else {
-            if(this.guessed === false) {
-                return "_";
-            }
-            else {
-                return this.letter;
-            }
+            return this.letter;
         }
     };
 
